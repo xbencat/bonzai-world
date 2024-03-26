@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
-    'nuxt-module-eslint-config',
+    '@nuxt/eslint',
+    '@nuxt/ui',
   ],
 
   experimental: {
@@ -68,11 +69,9 @@ export default defineNuxtConfig({
     // For UnoCSS
     inlineStyles: false,
   },
-
-  eslintConfig: {
-    setup: false,
-  },
-  alias: {
-    '@@': '/<rootDir>',
+  eslint: {
+    config: {
+      standalone: false,
+    },
   },
 })
